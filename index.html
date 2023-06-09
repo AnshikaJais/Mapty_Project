@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mapty | Map your workouts</title>
+    <link rel="shortcut icon" href="/icon.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <img src="/logo.png" alt="Logo" class="sidebar__img logo" />
+      <ul class="workouts">
+        <form class="form hidden">
+          <div class="form__row">
+            <label for="workout__type">Type</label>
+            <select name="workoutType" id="workout__type">
+              <option value="running">Running</option>
+              <option value="cycling">Cycling</option>
+            </select>
+          </div>
+          <div class="form__row">
+            <label for="workout__distance">Distance</label>
+            <input
+              id="workout__distance"
+              type="number"
+              placeholder="km"
+              autofocus
+            />
+          </div>
+          <div class="form__row">
+            <label for="workout__duration">Duration</label>
+            <input id="workout__duration" Duration="number" placeholder="min" />
+          </div>
+          <div class="form__row">
+            <label for="workout__cadence">Cadence</label>
+            <input id="workout__cadence" type="number" placeholder="step/min" />
+          </div>
+          <div class="form__row form__row--hidden">
+            <label for="workout__elevation">Elev Gain</label>
+            <input id="workout__elevation" type="number" placeholder="meters" />
+          </div>
+          <button type="submit" class="form__btn">OK</button>
+        </form>
+
+        <!-- <li class="workout workout__running">
+          <h2 class="workout__heading">Running on August 20</h2>
+          <div class="workout__detail">
+            <span class="workout__icon">🏃</span>
+            <span class="workout__value">5</span>
+            <span class="workout__unit">KM</span>
+          </div>
+          <div class="workout__detail">
+            <span class="workout__icon">⏱️</span>
+            <span class="workout__value">20</span>
+            <span class="workout__unit">MIN</span>
+          </div>
+          <div class="workout__detail">
+            <span class="workout__icon">⚡</span>
+            <span class="workout__value">4.0</span>
+            <span class="workout__unit">MIN/KM</span>
+          </div>
+          <div class="workout__detail">
+            <span class="workout__icon">👣</span>
+            <span class="workout__value">175</span>
+            <span class="workout__unit">SPM</span>
+          </div>
+        </li>
+        <li class="workout workout__cycling">
+          <h2 class="workout__heading">Cycling on August 20</h2>
+          <div class="workout__detail">
+            <span class="workout__icon">🚴‍♀️</span>
+            <span class="workout__value">5</span>
+            <span class="workout__unit">KM</span>
+          </div> 
+          <div class="workout__detail">
+            <span class="workout__icon">⏱️</span>
+            <span class="workout__value">20</span>
+            <span class="workout__unit">MIN</span>
+          </div>
+          <div class="workout__detail">
+            <span class="workout__icon">⚡</span>
+            <span class="workout__value">4.0</span>
+            <span class="workout__unit">MIN/KM</span>
+          </div>
+          <div class="workout__detail">
+            <span class="workout__icon">⛰</span>
+            <span class="workout__value">400</span>
+            <span class="workout__unit">M</span>
+          </div>
+        </li> -->
+      </ul>
+      <p class="copyright">
+        &copy; Copyright by
+        <a
+          class="twitter-link"
+          target="_blank"
+          href="https://twitter.com/jonasschmedtman"
+          >Anshika Jaiswal</a
+        >. Use for learning or your portfolio. Don't use to teach. Don't claim
+        as your own.
+      </p>
+    </div>
+    <div id="map"></div>
+  </body>
+</html>
